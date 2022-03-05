@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erro</title>
+    <link rel="stylesheet" href="/public/styles/erro.css">
+</head>
+<body>
+    <div class="err">
+        <h1>Erro: <%= code %></h1>
+        <% if (code == 400) { %>
+            <p>Essa resposta significa que o servidor não entendeu a requisição pois está com uma sintaxe inválida.</p>
+        <% } else if (code == 500) { %>
+            <p>não consegue especificar o erro real que ocorre internamente durante o acesso ao site.</p>
+        <% } %>
+    </div>
+</body>
+</html>

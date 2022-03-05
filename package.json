@@ -1,0 +1,20 @@
+{
+  "name": "octopus-journey",
+  "version": "1.0.0",
+  "description": "A simple website created to store and display content: title and text",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon config/server.js"
+  },
+  "author": "jocaluiz",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "consign": "^0.1.6",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "mysql2": "^2.3.3"
+  }
+}

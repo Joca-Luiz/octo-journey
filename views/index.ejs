@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content view</title>
+    <link rel="stylesheet" href="/public/styles/content.css">
+    <link rel="stylesheet" href="/public/styles/subjects.css">
+    <link rel="stylesheet" href="/public/styles/main.css">
+</head>
+<body>
+    <%- include('./header'); %>
+    <div class="contents">
+        <h1>Conteúdos</h1>
+        <% for (var i = 0; i < contents.length;  i++ ) { %>
+            <div class="content">
+                <h1><%= contents[i].title %></h1>
+                <p><%= contents[i].text %></p>
+            </div>
+        <% } %>
+        <div id="add" class="content max">
+            <a id="new"><div class="add"><span>+</span></div></a>
+        </div>
+        <script type="text/javascript" src="/public/scripts/content.js"></script>
+    </div>
+    <div class="subjects">
+        <h1>Matérias do dia</h1>
+        <% for (var i = 0; i < subjects.length;  i++ ) { %>
+            <a href="/subjects/<%= subjects[i].uni %>">
+                <div class="subject">
+                    <h1><%= subjects[i].title %></h1>
+                    <p>Autor: <%= subjects[i].autor %></p>
+                    <span>#<%= subjects[i].uni %></span>
+                </div>
+            </a>
+        <% } %>
+        <div class="subject">
+            <a id="newSubjectButton"><div class="add">+</div></a>
+        </div>
+        <script type="text/javascript" src="/public/scripts/subject.js"></script>
+    </div>
+</body>
+</html>

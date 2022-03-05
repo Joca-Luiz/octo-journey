@@ -1,0 +1,15 @@
+.err {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.err h1 {
+    font-size: 100px;
+    color: #800080;
+    text-align: center;
+}
+
+.err p {
+    color: #575656;
+}
